@@ -1,4 +1,4 @@
-package ch.heigvd.res.chill.domain.Rafiibro;
+package ch.heigvd.res.chill.domain.rafiibro;
 
 import ch.heigvd.res.chill.domain.Bartender;
 import ch.heigvd.res.chill.protocol.OrderRequest;
@@ -21,7 +21,7 @@ class RafiiTest {
     @Test
     void aBartenderShouldAcceptAnOrderForRafii() {
         Bartender jane = new Bartender();
-        String productName = "ch.heigvd.res.chill.domain.Rafiibro.Rafii";
+        String productName = "ch.heigvd.res.chill.domain.rafiibro.Rafii";
         OrderRequest request = new OrderRequest(3, productName);
         OrderResponse response = jane.order(request);
         BigDecimal expectedTotalPrice = Rafii.PRICE.multiply(new BigDecimal(3));
